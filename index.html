@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+
+<html lang="ar">
+
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>3alModa</title>
+  
+
+<style>
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+
+  background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+      color: 
+
+#333;
+    }
+
+    header {
+      background-color: #007bff;
+      color: white;
+      
+
+padding: 15px 0;
+      text-align: center;
+      border-radius: 0 0 12px 12px;
+    
+
+}
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: 
+
+center;
+      padding: 10px 0;
+      margin-top: 40px;
+      border-radius: 12px 
+
+12px 0 0;
+    }
+
+    h1, h3 {
+      color: #444;
+      text-align: center;
+    }
+
+    
+
+.product {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 
+
+12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: inline-block;
+    
+
+  margin: 10px;
+      width: 180px;
+      text-align: center;
+      transition: 
+
+transform 0.2s ease;
+    }
+
+    .product:hover {
+      transform: scale(1.03);
+    }
+
+  
+
+  .product img {
+      width: 100%;
+      border-radius: 8px;
+      cursor: 
+
+pointer;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+     
+
+ border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: 
+
+pointer;
+      margin-top: 10px;
+      transition: background-color 0.2s ease;
+    
+
+}
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #cart {
+      
+
+background-color: #fff;
+      padding: 20px;
+      margin-top: 40px;
+      border-
+
+radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    #cart-items 
+
+img {
+      width: 80px;
+      border-radius: 6px;
+      margin: 5px;
+    }
+  
+
+</style>
+
+
+
+<style>
+  .nav-buttons {
+    margin-bottom: 20px;
+  }
+
+  .nav-buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .section {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .item {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+
+  .item img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .item button {
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+
+<style>
+  button {
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+</style>
+
+</head>
+
+
+<body>
+
+
+
+
+
+<header>
+  <h1>3alModa shop</h1>
+
+</header>
+<button onclick="window.location.href='add-product.html'"></button>اضف منتجك</button>
+
+<button onclick="window.location.href='about.html'">من نحن</button>
+
+<div class="nav-buttons">
+  <button onclick="showSection('dress')">👕 Dress</button>
+  <button onclick="showSection('shoes')">👖 Shoes</button>
+  <button onclick="showSection('T-shirts')">👖 T-shirts</button>
+  <button onclick="showSection('Hoodies')">👖 Hoodies</button>
+</div>
+
+
+
+<h3>منتجاتنا</h3>
+
+
+
+<!-- قسم الساتين -->
+<div id="dress" class="section">
+  
+<div class="product">
+  <img src="images/dress/olo.jpg" alt="Grey dress" 
+
+onclick="zoomImage(this.src)">
+  <p>Gray dress</p>
+ 
+<button onclick="addToCart('Grey dress', 'images/dress/olo.jpg')">اضف الي 
+
+السله</button>
+
+</div>
+
+
+
+
+<div class="product">
+
+  <img src="images/dress/pop.jpg" alt="White dress" onclick="zoomImage
+
+(this.src)">
+
+  <p>White dress</p>
+ 
+<button onclick="addToCart('White dress', 'images/dress/pop.jpg')">اضف الي 
+
+السله</button>
+
+</div>
+
+
+</div>
+
+<!-- قسم الجزم -->
+<div id="shoes" class="section">
+  
+
+<div class="product">
+
+  <img src="images/shoes/ho.jpg" alt="shoes*" onclick="zoomImage(this.src)">
+
+  <p></p>
+ 
+<button onclick="addToCart('shoes*', 'images/shoes/ho.jpg')">اضف الي السله</button>
+
+</div>
+
+
+
+
+<div class="product">
+
+  <img src="images/shoes/io.jpg" alt="shoes*" onclick="zoomImage(this.src)">
+
+  <p></p>
+ 
+<button onclick="addToCart('shoes*', 'images/shoes/io.jpg')">اضف الي السله</button>
+
+</div>
+
+
+
+
+
+<div class="product">
+
+  <img src="images/shoes/iuu.jpg" alt="shoes#" onclick="zoomImage(this.src)">
+
+  <p></p>
+ 
+<button onclick="addToCart('shoes#', 'images/shoes/iuu.jpg')">اضف الي السله</button>
+
+</div>
+
+
+</div>
+
+
+
+<!-- قسم التشيرتات -->
+<div id="T-shirts" class="section">
+  
+
+<div class="product">
+
+  <img src="images/tshirts/h.jpg" alt="off white T-shirt" onclick="zoomImage
+
+(this.src)">
+
+  <p>off white T-shirt</p>
+ 
+<button onclick="addToCart('off white T-shirt', 'images/tshirts/h.jpg')">اضف الي 
+
+السله</button>
+
+</div>
+
+
+
+
+
+
+
+<div class="product">
+
+  <img src="images/tshirts/hh.jpg" alt="icon T-shirt" onclick="zoomImage
+
+(this.src)">
+
+  <p>icon T-shirt</p>
+ 
+<button onclick="addToCart('icon T-shirt', 'images/tshirts/hh.jpg')">اضف الي 
+
+السله</button>
+
+</div>
+
+
+
+
+
+<div class="product">
+
+  <img src="images/tshirts/hhh.jpg" alt="wing T-shirt" onclick="zoomImage
+
+(this.src)">
+
+  <p>wing T-shirt</p>
+ 
+<button onclick="addToCart('wing T-shirt', 'images/tshirts/hhh.jpg')">اضف الي 
+
+السله</button>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+<!-- قسم الهوديز -->
+<div id="Hoodies" class="section">
+  
+<div class="product">
+
+  <img src="images/hoodies/b.jpg" alt="hoodie2" onclick="zoomImage(this.src)">
+
+  <p></p>
+ 
+<button onclick="addToCart('hoodie1', 'images/hoodies/b.jpg')">اضف الي السله</button>
+
+</div>
+
+
+
+<div class="product">
+
+  <img src="images/hoodies/bb.jpg" alt="hoodie2" onclick="zoomImage(this.src)">
+
+  <p></p>
+ 
+<button onclick="addToCart('hoodie1', 'images/hoodies/bb.jpg')">اضف الي السله</button>
+
+</div>
+
+
+
+
+<div class="product">
+
+  <img src="images/hoodies/bbb.jpg" alt="hoodie2" onclick="zoomImage(this.src)">
+
+  <p></p>
+ 
+<button onclick="addToCart('hoodie1', 'images/hoodies/bbb.jpg')">اضف الي 
+
+السله</button>
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+<div id="cart">
+
+  <h3>السله</h3>
+  <div id="cart-items">
+</div>
+
+
+  <br>
+  
+<button onclick="clearCart()">افرغ السله</button>
+  <button onclick="window.location.href='buy.html'"></button>اشتري الآن</button>
+</div>
+
+<!-- ????? ????? ?????? -->
+<div id="imageModal" 
+
+style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
+
+background-color:rgba(0,0,0,0.8); justify-content:center; align-items:center; 
+
+z-index:9999;">
+  <span onclick="closeImage()" style="position:absolute; 
+
+top:20px; right:30px; font-size:30px; color:white; 
+
+cursor:pointer;">&times;</span>
+  <img id="modalImage" src="" style="max-
+
+width:80%; max-height:80%; border-radius:12px;">
+
+</div>
+
+
+
+<footer>
+  <p>جميع الحقوق محفوظه &copy; 2025</p>
+</footer>
+
+
+
+<script>
+
+
+  let selectedProducts = [];
+
+  function addToCart(name, image) {
+    
+
+selectedProducts.push({ name: name, image: image });
+    updateCartDisplay();
+  }
+
+  
+
+function updateCartDisplay() {
+    const cartItems = document.getElementById
+
+("cart-items");
+    if (!cartItems) return;
+    cartItems.innerHTML = "";
+
+    
+
+selectedProducts.forEach((product, index) => {
+      const container = 
+
+document.createElement("div");
+      container.style.position = "relative";
+      
+
+container.style.display = "inline-block";
+      container.style.margin = "10px";
+
+  
+
+    const img = document.createElement("img");
+      img.src = product.image;
+     
+
+ img.alt = product.name;
+      img.style.width = "80px";
+      
+
+img.style.borderRadius = "6px";
+
+      const closeBtn = document.createElement
+
+("span");
+      closeBtn.innerHTML = "&times;";
+      closeBtn.style.position = 
+
+"absolute";
+      closeBtn.style.top = "2px";
+      closeBtn.style.right = "5px";
+  
+
+    closeBtn.style.color = "white";
+      closeBtn.style.background = "rgba
+
+(0,0,0,0.7)";
+      closeBtn.style.padding = "2px 6px";
+      
+
+closeBtn.style.borderRadius = "50%";
+      closeBtn.style.cursor = "pointer";
+     
+
+ closeBtn.style.fontSize = "16px";
+      closeBtn.onclick = () => removeFromCart
+
+(index);
+
+      container.appendChild(img);
+      container.appendChild(closeBtn);
+  
+
+    cartItems.appendChild(container);
+    });
+
+    const productNames = 
+
+selectedProducts.map(p => p.name);
+    localStorage.setItem("cartProducts", 
+
+JSON.stringify(productNames));
+  }
+
+  function removeFromCart(index) {
+    
+
+selectedProducts.splice(index, 1);
+    updateCartDisplay();
+  }
+
+  function 
+
+clearCart() {
+    selectedProducts = [];
+    updateCartDisplay();
+    
+
+localStorage.removeItem("cartProducts");
+  }
+
+  function zoomImage(src) {
+    const 
+
+modal = document.getElementById("imageModal");
+    const modalImg = 
+
+document.getElementById("modalImage");
+    modal.style.display = "flex";
+    
+
+modalImg.src = src;
+  }
+
+  function closeImage() {
+    document.getElementById
+
+("imageModal").style.display = "none";
+  }
+
+
+</script>
+
+
+
+
+<script>
+  function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => {
+      sec.style.display = 'none';
+    });
+    document.getElementById(id).style.display = 'flex';
+  }
+
+  // نخلي أول قسم ظاهر أول ما الصفحة تفتح
+  window.onload = () => showSection('tshirts');
+</script>
+
+</body>
+
+
+</html>
